@@ -10,7 +10,7 @@ const client = new Pool({
   host: 'localhost',
   database: process.env.DATABASE_NAME,
   password: process.env.DATABASE_PASSWORD,
-  port: 5432,
+  port: 5432
 });
 
 client.on('connect', () => console.log('Database connected successfully'));
