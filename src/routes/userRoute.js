@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { postUserController } from '../controllers/userController.js';
+import { loginController, postUserController } from '../controllers/userController.js';
 
 const router = Router();
 
-router.route('/register').get((req, res) => res.json({msg: "I am alive"})).post(postUserController);
-
+router.route('/register').post(postUserController);
+router.route('/login').post(loginController);
 export default router;
 
